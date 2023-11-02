@@ -1,24 +1,24 @@
-## Set up
+## Set-up
 ```
 minikube start
 kubectl get all
 kubectl get nodes
 ```
 
-## Test self healing arch - delete a single pod
+## Test self-healing arch - delete a single pod
 ```
 kubectl apply -f nginx-deployment-withrolling.yaml
 kubectl delete pod nginx-app-77544c8665-8tvr4
 kubectl get all
 ```
 
-## Test self healing arch - delete replica set
+## Test self-healing arch - delete replica set
 ```
 kubectl delete rs nginx-app-77544c8665
 kubectl get rs
 ```
 
-## Look at setup
+## Look at set-up
 ```
 kubectl describe pods
 kubectl describe rs
